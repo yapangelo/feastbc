@@ -1,0 +1,26 @@
+@use "../../styles/partials/typography" as *;
+
+.hero {
+    background-image: url(../../assets/images/mobile-hero.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 0 2rem 0;
+
+    &__logo {
+        width: 112px;
+        margin: 0 auto;
+    }
+
+    &__welcome {
+        color: white;
+    }
+
+    &__text {
+        color: white;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+}

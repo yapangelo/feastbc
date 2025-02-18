@@ -1,0 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 1rem;
+    background-color: rgba( #3a3a3a00, .2);
+  
+    &__hamburger {
+      cursor: pointer;
+      position: absolute;
+      width: 1.5rem;;
+      left: 1rem;
+      z-index: 1001;
+      transition: transform 0.5s ease; // Add smooth animation
+      margin: 1rem;
+  
+      &.open {
+        transform: rotate(180deg); // Rotate the icon when it's open
+      }
+
+      @include desktop-1280 {
+        display: none;
+      }
+    }
+
+    &__nav {
+      list-style: none;
+      display: none;
+      color: black;
+      position: absolute;
+      left: 1rem;
+
+      &-li {
+        padding: 0 1rem;
+
+        &:hover {
+          color: white;
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+
+      @include desktop-1280 {
+        display: flex;
+      }
+    }
+  }
