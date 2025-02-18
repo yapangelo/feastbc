@@ -1,4 +1,5 @@
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
 .hero {
     background-image: url(../../assets/images/mobile-hero.jpg);
@@ -21,6 +22,21 @@
         color: white;
         width: 75%;
         margin: auto;
+    }
+
+    @include desktop-1280 {
+        background-image: url(../../assets/images/desktop-hero.jpg);
+        background-position: center -150px;
+        padding: 10rem 0 2rem 0;
+
+        &__logo {
+            width: 224px;
+        }
+
+        &__text {
+            width: 50%;
+            line-height: 2rem;
+        }
     }
 }
 
@@ -52,6 +68,26 @@
         align-items: center;
         width: fit-content;
     }
+
+    @include desktop-1280 {
+        background-image: url("../../assets/images/desktop-featurebg.jpg");
+        background-position: center -200px;
+        padding: 5rem 0 2rem 0;
+        
+
+        &__text {
+            line-height: 2rem;
+        }
+
+        &__title {
+            font-size: 50px
+        }
+
+        &__text-container {
+            width: 50%;
+            margin: 1rem auto;
+        }
+    }
 }
 
 .prayer {
@@ -62,6 +98,13 @@
     width: 70%;
     margin: 0 auto;
     padding: 2rem 0;
+
+    @include desktop-1280 {
+        &__text {
+            line-height: 2rem;
+            margin-top: 1rem;
+        }
+    }
 }
 
 .social {
