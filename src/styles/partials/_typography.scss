@@ -21,17 +21,17 @@ h1 {
     font-size: 22px;
     letter-spacing: 2px;
     @include desktop-1280 {
-        font-size: 2.5rem;
+        font-size: 26px;
     }
 }
 
 h2 {
     @include font-family;
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 34px;
     @include desktop-1280 {
         font-weight: 200;
-        font-size: 2rem;
+        font-size: 38px;
     }
 }
 
