@@ -1,6 +1,6 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/home";
+import Home from "./pages/Home/Home";
 import GrandFeast from "./pages/GrandFeast/GrandFeast";
 import Events from "./pages/Events/Events";
 import About from "./pages/About/About";
