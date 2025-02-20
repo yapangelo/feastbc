@@ -1,24 +1,44 @@
+import { useEffect, useRef } from "react";
 import "./GrandFeast.scss";
 import bo from "../../assets/images/boedited.jpg";
 import arun from "../../assets/images/arunedited.jpg";
 import monch from "../../assets/images/monchedited.jpg";
-import feastvideo from "../../assets/videos/grandfeast-video.mp4";
+
+const feastVideoUrl =
+  "https://www.youtube.com/embed/oshQDII5k6U?autoplay=1&loop=1&playlist=oshQDII5k6U";
 
 const GrandFeast = () => {
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    const videoDuration = 60 * 1000; // Set this to your actual video length in milliseconds
+
+    const reloadVideo = () => {
+      if (iframeRef.current) {
+        iframeRef.current.src = feastVideoUrl; // Reload the video to loop
+      }
+    };
+
+    const timeout = setTimeout(reloadVideo, videoDuration);
+
+    return () => clearTimeout(timeout); // Cleanup when the component unmounts
+  }, []);
+
   return (
     <div className="grandfeast">
       <div className="grandfeast__hero">
         <div className="grandfeast__hero-overlay">
           <h2 className="grandfeast__hero-title">GRAND FEAST BC</h2>
         </div>
-        <video
-          src={feastvideo}
-          className="grandfeast__hero-video"
-          controls
-          autoPlay
-          muted
-          loop
-        />
+        <div className="grandfeast__hero-video-container">
+          <iframe
+            ref={iframeRef}
+            src={`${feastVideoUrl}?autoplay=1`}
+            className="grandfeast__hero-video"
+            allow="autoplay; encrypted-media"
+            frameBorder="0"
+          ></iframe>
+        </div>
       </div>
       <div className="grandfeast__copy">
         <h1 className="grandfeast__copy-title">COME JOIN US!</h1>
