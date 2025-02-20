@@ -1,8 +1,58 @@
+@use "../../styles/partials/mixins" as *;
+
 .grandfeast {
     &__hero {
+        position: relative;
+        width: 100%;
+        margin: auto;
+
+        &-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        &-overlay {
+            position: absolute;
+            top: 40%;
+            left: 7.5rem;
+            transform: translate(-50%, -50%);
+
+            @include desktop-1280 {
+                top: 45%;
+                left: 9rem;
+            }
+        }
+
         &-title {
             width: 155px;
+            color: white;
+
+            @include desktop-1280 {
+                font-size: 5rem;
+            }
         }
         
+    }
+
+    &__copy {
+        padding: 2rem;
+        text-align: center;
+
+        &-text {
+            line-height: 1.6rem;
+
+            @include desktop-1280 {
+                line-height: 2.5rem;
+            }
+        }
+    }
+
+    &__speakers {
+        text-align: center;
+
+        &-gallery, &-image {
+            padding: 1.5rem;
+        }
     }
 }
