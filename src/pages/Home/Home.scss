@@ -41,18 +41,26 @@
 }
 
 .feature {
-    background-image: url(../../assets/images/mobile-grandfeastbg.jpg);
-    background-size: cover;
+    background-color: black;
     padding: 2rem;
     width: 100%;
+    position: relative;
 
-    &__text-container {
+    &__container {
         color: white;
         text-align: left;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    &__themeart {
+        width: 20rem;
     }
 
     &__title {
         width: 155px;
+        font-size: 3rem;
     }
 
     &__button-container {
@@ -70,11 +78,7 @@
     }
 
     @include desktop-1280 {
-        background-image: url("../../assets/images/desktop-featurebg.jpg");
-        background-position: center -250px;
-        padding: 5rem 0 2rem 0;
         
-
         &__text {
             line-height: 2rem;
         }

@@ -1,72 +1,77 @@
-import { useEffect, useRef } from "react";
 import "./GrandFeast.scss";
 import bo from "../../assets/images/boedited.jpg";
 import arun from "../../assets/images/arunedited.jpg";
 import monch from "../../assets/images/monchedited.jpg";
-
-const feastVideoUrl =
-  "https://www.youtube.com/embed/oshQDII5k6U?autoplay=1&loop=1&playlist=oshQDII5k6U";
+import hero from "../../assets/images/grandfeast-hero.jpg";
+import Button from "../../components/Button/Button";
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
 
 const GrandFeast = () => {
-  const iframeRef = useRef(null);
+  const form = useRef();
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+  const [popupType, setPopupType] = useState("");
 
-  useEffect(() => {
-    const videoDuration = 60 * 1000; // Set this to your actual video length in milliseconds
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const reloadVideo = () => {
-      if (iframeRef.current) {
-        iframeRef.current.src = feastVideoUrl; // Reload the video to loop
-      }
-    };
+    emailjs
+      .sendForm(
+        "service_f63htos", // Service ID
+        "template_a8ihvuh", // Template ID
+        form.current,
+        "0mk-5r8TGGIOvV0Uy" // Public Key
+      )
+      .then(
+        (result) => {
+          setPopupMessage("Email sent successfully!"); // Success message
+          setPopupType("success"); // Set popup type to success
+          setShowPopup(true); // Show the popup
 
-    const timeout = setTimeout(reloadVideo, videoDuration);
+          form.current.reset();
+        },
+        (error) => {
+          setPopupMessage("Failed to send the email. Please try again."); // Error message
+          setPopupType("error"); // Set popup type to error
+          setShowPopup(true); // Show the popup
+        }
+      );
+  };
 
-    return () => clearTimeout(timeout); // Cleanup when the component unmounts
-  }, []);
+  React.useEffect(() => {
+    if (showPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 3000); // Hide after 3 seconds
+      return () => clearTimeout(timer); // Clear timer if the component unmounts
+    }
+  }, [showPopup]);
 
   return (
     <div className="grandfeast">
       <div className="grandfeast__hero">
-        <div className="grandfeast__hero-overlay">
-          <h2 className="grandfeast__hero-title">GRAND FEAST BC</h2>
-        </div>
-        <div className="grandfeast__hero-video-container">
-          <iframe
-            ref={iframeRef}
-            src={`${feastVideoUrl}?autoplay=1`}
-            className="grandfeast__hero-video"
-            allow="autoplay; encrypted-media"
-            frameBorder="0"
-          ></iframe>
-        </div>
+        <img
+          src={hero}
+          alt="grand feast details"
+          className="grandfeast__hero-image"
+        />
       </div>
       <div className="grandfeast__copy">
-        <h1 className="grandfeast__copy-title">COME JOIN US!</h1>
         <p className="grandfeast__copy-text">
-          The <strong>Grand Feast BC</strong> is an annual gathering that brings
-          together people from <strong>all walks of life</strong> for a powerful
-          day of worship, inspiration, and spiritual renewal. Rooted in the
-          mission of the Light of Jesus Community, this event serves as a beacon
-          of faith, unity, and hope,
-          <strong>inviting both Catholics and non-Catholics</strong>
-          to experience God’s love in a profound way. Through uplifting music,
-          heartfelt prayers, and life-changing talks, the Grand Feast creates an
-          atmosphere where attendees can deepen their relationship with God and
-          find encouragement in their personal journeys.
-        </p>
-        <p className="grandfeast__copy-text">
-          This year’s Grand Feast will be held on{" "}
-          <strong>
-            Saturday, August 30, 2025, at the Bell Performing Arts Theatre in
-            Surrey,
-          </strong>
-          featuring renowned speakers Bro. Bo Sanchez, Bro. Arun Gogna and Bro.
-          Monching Bueno. With a legacy of hosting inspiring events, the Grand
-          Feast continues to be a place of encounter—where individuals,
-          families, and communities come together to be refreshed in spirit and
-          strengthened in faith. Whether you are seeking inspiration, healing,
-          or a renewed sense of purpose, the Grand Feast is a celebration of
-          God’s grace that <strong> welcomes everyone with open arms</strong>.
+          The Grand Feast BC is an annual gathering that unites people from all
+          walks of life for a day of worship, inspiration, and spiritual
+          renewal. Rooted in the mission of the Light of Jesus Community, it
+          serves as a beacon of faith, unity, and hope, welcoming both Catholics
+          and non-Catholics to experience God’s love through uplifting music,
+          heartfelt prayers, and life-changing talks. This year’s event will
+          take place on Saturday, August 30, 2025, at the Bell Performing Arts
+          Theatre in Surrey, featuring renowned speakers Bro. Bo Sanchez, Bro.
+          Arun Gogna, and Bro. Monching Bueno. With a legacy of hosting
+          transformative experiences, the Grand Feast continues to be a place
+          where individuals, families, and communities come together to be
+          refreshed in spirit and strengthened in faith, offering inspiration,
+          healing, and a renewed sense of purpose to all who attend.
         </p>
       </div>
       <div className="grandfeast__speakers">
@@ -88,6 +93,52 @@ const GrandFeast = () => {
             className="grandfeast__speakers-image"
           />
         </div>
+      </div>
+      <div className="grandfeast__form">
+        <h1 className="grandfeast__form-title">RESERVE YOUR TICKETS!</h1>
+
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Name"
+            className="contact__form-name"
+          />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Email"
+            className="contact__form-email"
+          />
+          <input
+            type="tel"
+            name="user_phone"
+            placeholder="Phone"
+            className="contact__form-phone"
+          />
+          <input
+            type="number"
+            name="user_numberoftickets"
+            placeholder="Number of Tickets"
+            className="contact__form-tickets"
+            min="1"
+            required
+          />
+
+          <Button
+            type="submit"
+            text="Submit"
+            value="Send"
+            className="button--primary contact__form-button"
+          />
+        </form>
+
+        {/* Popup Notification */}
+        {showPopup && (
+          <div className={`popup ${popupType}`}>
+            <p>{popupMessage}</p>
+          </div>
+        )}
       </div>
     </div>
   );
