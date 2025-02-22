@@ -45,22 +45,22 @@
     padding: 2rem;
     width: 100%;
     position: relative;
+    overflow: hidden;
 
     &__container {
         color: white;
         text-align: left;
         display: flex;
         justify-content: center;
-        gap: 3rem;
+        gap: 1rem;
     }
 
     &__themeart {
-        width: 20rem;
+        width: 12rem;
     }
 
     &__title {
         width: 155px;
-        font-size: 3rem;
     }
 
     &__button-container {
