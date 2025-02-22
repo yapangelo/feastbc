@@ -8,7 +8,8 @@
 p, li {
     @include font-family;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
     @include desktop-1280 {
         font-size: 20px
