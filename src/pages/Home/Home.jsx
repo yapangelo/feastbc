@@ -2,6 +2,7 @@ import "./Home.scss";
 import feastlogo from "../../assets/images/BC_Feast_Vertical.png";
 import facebook from "../../assets/icons/facebook.png";
 import insta from "../../assets/icons/insta.png";
+import lettherebelight from "../../assets/images/lettherebelight.png";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
 
@@ -21,10 +22,19 @@ const Home = () => {
         </Link>
       </div>
       <div className="feature">
-        <div className="feature__text-container">
-          <h2 className="feature__title">Grand Feast BC</h2>
-          <p className="feature__text">St. Mary’s Gym, Vancouver</p>
-          <p className="feature__text">August 25, 2025</p>
+        <div className="feature__container">
+          <div className="feature__container-flex">
+            <h2 className="feature__title">Grand Feast BC</h2>
+            <p className="feature__text">St. Mary’s Gym, Vancouver</p>
+            <p className="feature__text">August 25, 2025</p>
+          </div>
+          <div className="feature__container-flex">
+            <img
+              src={lettherebelight}
+              alt="grand feast theme"
+              className="feature__themeart"
+            />
+          </div>
         </div>
         <div className="feature__button-container">
           <Link to="/grandfeast">
