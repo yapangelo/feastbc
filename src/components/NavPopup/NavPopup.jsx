@@ -1,9 +1,9 @@
 import "./NavPopup.scss";
 import { Link } from "react-router-dom";
 
-const NavPopup = ({ closePopup }) => {
-  const handleLinkClick = () => {
-    closePopup();
+const NavPopup = ({ onClose }) => {
+  const handleLinkClick = (e) => {
+    onClose();
   };
 
   return (
