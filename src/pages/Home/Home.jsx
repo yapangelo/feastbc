@@ -25,7 +25,9 @@ const Home = () => {
         <div className="feature__container">
           <div className="feature__container-flex">
             <h2 className="feature__title">Grand Feast BC</h2>
-            <p className="feature__text">St. Mary’s Gym, Vancouver</p>
+            <p className="feature__text">
+              Bell Performing Arts Theatre, Surrey
+            </p>
             <p className="feature__text">August 25, 2025</p>
           </div>
           <div className="feature__container-flex">
