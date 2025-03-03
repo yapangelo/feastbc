@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .speaker {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,11 @@
     flex: 1 1 200px; /* Ensures flexible sizing */
     text-align: center;
     position: relative;
+
+    @include desktop-1280 {
+        width: 30rem;
+        margin: auto;
+    }
 
     &__image {
         width: 20rem;
@@ -23,13 +30,18 @@
     &__overlay {
         position: absolute;
         top: 12rem;
-        left: 0;
+        left: 50%;
         width: 100%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         color: white;
         text-align: center;
+
+        @include desktop-1280 {
+            width: 60%;
+        }
     }
   }

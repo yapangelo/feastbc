@@ -83,13 +83,20 @@ const GrandFeast = () => {
       <div className="grandfeast__speakers">
         <h1 className="grandfeast__speakers-title">OUR SPEAKERS</h1>
         <div className="grandfeast__speakers-container">
-          <Speaker image={bo} name="Bo Sanchez" title="Founder, The Feast" />
+          <Speaker
+            className="grandfeast__speakers-speaker"
+            image={bo}
+            name="Bo Sanchez"
+            title="Founder, The Feast"
+          />
           <Speaker
             image={monching}
             name="Monching Bueno"
             title="Country Builder, Feast Canada"
+            className="grandfeast__speakers-speaker"
           />
           <Speaker
+            className="grandfeast__speakers-speaker"
             image={arun}
             name="Arun Gogna"
             title="Regional Builder, Feast Mega Manila"
