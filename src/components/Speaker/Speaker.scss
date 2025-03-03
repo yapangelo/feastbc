@@ -1,0 +1,35 @@
+.speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    flex: 1 1 200px; /* Ensures flexible sizing */
+    text-align: center;
+    position: relative;
+
+    &__image {
+        width: 20rem;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: .75rem;
+        line-height: .75rem;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 12rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+  }

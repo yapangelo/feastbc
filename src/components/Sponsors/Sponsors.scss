@@ -1,0 +1,46 @@
+@use "../../styles/partials/mixins" as *;
+
+.sponsors {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        @include section-title;
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        &-imgcontainer {
+            min-width: 10rem;
+            padding: .625rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                @include default-transition-hover;
+            }
+        }
+    }
+
+    &__gallery-image {
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        object-fit: contain;
+    }
+
+    .button--primary {
+        margin-top: 1rem;
+    }
+}

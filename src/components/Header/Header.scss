@@ -8,20 +8,33 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 1rem;
-    background-color: rgba( #3a3a3a00, .2);
+    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(58, 58, 58, 1);
+
+    &.scrolled {
+      background-color: rgba(58, 58, 58, 0.5);
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
   
     &__hamburger {
       cursor: pointer;
-      position: absolute;
-      width: 1.5rem;;
+      width: 1rem;;
       left: 1rem;
       z-index: 1001;
       transition: transform 0.5s ease; // Add smooth animation
-      margin: 1rem;
+      // margin: 1rem;
   
       &.open {
         transform: rotate(180deg); // Rotate the icon when it's open
+      }
+
+      &:hover {
+        @include default-transition-hover;
       }
 
       @include desktop-1280 {
@@ -30,25 +43,37 @@
     }
 
     &__nav {
-      list-style: none;
       display: none;
       color: white;
-      position: absolute;
-      left: 1rem;
 
       &-li {
         padding: 0 1rem;
         font-weight: 500;
 
         &:hover {
-          color: white;
-          cursor: pointer;
-          transform: scale(1.1);
+          @include default-transition-hover;
         }
       }
 
       @include desktop-1280 {
         display: flex;
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    &__logo {
+      width: 5rem;
+      height: auto;
+
+      &:hover {
+        cursor: pointer;
+        @include default-transition-hover;
       }
     }
   }

@@ -9,13 +9,29 @@
     }
 }
 
+@mixin tablet-768 {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 // buttons
 
-@mixin default-transition-buttons {
+@mixin default-transition-hover {
     transition: background-color 0.5s ease, transform 0.3s ease;
     cursor: pointer;
     &:hover {
-        background-color: #ff5d62;
         transform: scale(1.05);
     }
+}
+
+@mixin copy-specs {
+    padding: 3rem 4rem;
+    max-width: 70rem;
+    margin: auto;
+}
+
+@mixin section-title {
+    padding-bottom: 2rem;
+    text-align: center;
 }
