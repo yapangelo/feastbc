@@ -3,55 +3,64 @@
 
 .grandfeast {
     &__hero {
-        width: 100vw;
-        overflow: hidden;
+        width: 100%; /* Ensures the container takes full width */
+        overflow: hidden; /* Prevents horizontal overflow */
+        display: flex;
+        justify-content: center; /* Centers the image */
 
         &-image {
-            width: 100vw;  /* Makes it span the full viewport width */
-            height: auto;  /* Maintains aspect ratio */
-            object-fit: cover; /* Ensures the image covers the space */
-            display: block; /* Removes extra spacing from inline elements */
+            width: 100%; /* Ensures the image scales to fit its container */
+            height: auto; /* Keeps aspect ratio */
+            display: block; /* Removes extra spacing from inline images */
+            margin-top: 4rem;
         }
     }
 
     &__copy {
-        padding: 2rem;
+        @include copy-specs;
 
         &-text {
-            line-height: 1.6rem;
-            padding-bottom: 1.5rem;
 
-            @include desktop-1280 {
-                line-height: 2.5rem;
+            &--padding-bottom {
+                padding-bottom: 2rem;
             }
+        }
+
+        &-title {
+            padding-bottom: 2rem;
+            @include section-title;
         }
     }
 
     &__speakers {
+        background-image: url("../../assets/images/speakersbg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
         text-align: center;
+        color: white;
+        @include copy-specs;
 
-        &-gallery, &-image {
-            padding: 1.5rem;
+        &-title {
+            padding-bottom: 2rem;
         }
     }
 
     &__form {
         background-color: black;
         color: white;
-        text-align: center;
-        padding: 1rem;
+        @include copy-specs;
+
+        &-title {
+            @include section-title;
+        }
     }
 }
 
-.contact {
+.reservation {
     &__form {
-        padding: 0 2rem 1rem 2rem;
         display: flex;
         flex-direction: column;
-        @include desktop-1280 {
-            width: 50%;
-            margin: auto
-        }
+        align-items: center;
 
         &-name, &-email, &-phone, &-tickets {
             padding: .5rem;
@@ -59,6 +68,8 @@
             margin: .5rem 0;
             border: 1px solid black;
             border-radius: 3px;
+            width: 100%;
+            max-width: 17.75rem;
             
 
             &:focus {

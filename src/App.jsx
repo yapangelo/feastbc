@@ -1,22 +1,44 @@
+import React, { useRef } from "react";
 import "./App.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
 import GrandFeast from "./pages/GrandFeast/GrandFeast";
-import Events from "./pages/Events/Events";
-import About from "./pages/About/About";
 import Header from "./components/Header/Header";
+import Prayer from "./pages/Prayer/Prayer";
+import Socials from "./pages/Socials/Socials";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
+  // Create refs for each section
+  const grandFeastRef = useRef(null);
+  const prayerRef = useRef(null);
+  const socialsRef = useRef(null);
+
+  // Function to scroll to the referenced section
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/grandfeast" element={<GrandFeast />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Header
+        scrollToSection={scrollToSection}
+        grandFeastRef={grandFeastRef}
+        prayerRef={prayerRef}
+        socialsRef={socialsRef}
+      />
+      <div ref={grandFeastRef}>
+        <GrandFeast />
+      </div>
+      <div ref={prayerRef}>
+        <Prayer />
+      </div>
+      <div ref={socialsRef}>
+        <Socials />
+      </div>
+      <BackToTop />
+      <footer className="app__footer">
+        <div className="app__footer-container"></div>
+      </footer>
+    </div>
   );
 }
 

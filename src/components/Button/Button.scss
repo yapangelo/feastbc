@@ -3,16 +3,25 @@
 
 .button {
     color: white;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 700;
+    font-size: 1rem;
     letter-spacing: 2px;
     padding: .50rem 2rem;
     margin: 1rem 0;
     border: none;
-    border-radius: 2px; 
+    border-radius: 4px;
+    text-align: center; 
+    width: auto;
+    max-width: fit-content;
     
     &--primary {
         background-color: $feastred;
-        @include default-transition-buttons;
+        @include default-transition-hover;
+    }
+
+    &--white {
+        background-color: white;
+        color: black;
+        @include default-transition-hover;
     }
 }
