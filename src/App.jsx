@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
 import "./App.scss";
-import GrandFeast from "./pages/GrandFeast/GrandFeast";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
+import Home from "./pages/Home/Home";
+import SponsorPage from "./pages/SponsorPage/SponsorPage";
 import Header from "./components/Header/Header";
-import Prayer from "./pages/Prayer/Prayer";
-import Socials from "./pages/Socials/Socials";
 import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
@@ -12,33 +12,64 @@ function App() {
   const prayerRef = useRef(null);
   const socialsRef = useRef(null);
 
-  // Function to scroll to the referenced section
+  // Function to scroll to the referenced section smoothly and slowly
   const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    if (ref.current) {
+      const targetPosition = ref.current.offsetTop;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 1200; // Adjust for slower/faster scrolling (in milliseconds)
+      let startTime = null;
+
+      const easeInOutQuad = (t) =>
+        t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+      const animateScroll = (currentTime) => {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1); // Ensure it stops at 1
+        const easedProgress = easeInOutQuad(progress); // Apply easing
+
+        window.scrollTo(0, startPosition + distance * easedProgress);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+
+      requestAnimationFrame(animateScroll);
+    }
   };
 
   return (
-    <div>
+    <BrowserRouter>
+      {/* Header stays inside App.jsx and receives scrollToSection + refs */}
       <Header
         scrollToSection={scrollToSection}
         grandFeastRef={grandFeastRef}
         prayerRef={prayerRef}
         socialsRef={socialsRef}
       />
-      <div ref={grandFeastRef}>
-        <GrandFeast />
-      </div>
-      <div ref={prayerRef}>
-        <Prayer />
-      </div>
-      <div ref={socialsRef}>
-        <Socials />
-      </div>
+      <Routes>
+        {/* Pass refs & scroll function to Home so it can attach them to sections */}
+        <Route
+          path="/"
+          element={
+            <Home
+              scrollToSection={scrollToSection}
+              grandFeastRef={grandFeastRef}
+              prayerRef={prayerRef}
+              socialsRef={socialsRef}
+            />
+          }
+        />
+        <Route path="/sponsorpage" element={<SponsorPage />} />
+      </Routes>
       <BackToTop />
       <footer className="app__footer">
         <div className="app__footer-container"></div>
       </footer>
-    </div>
+    </BrowserRouter>
   );
 }
 
