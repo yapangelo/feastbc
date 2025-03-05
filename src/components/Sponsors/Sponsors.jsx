@@ -1,4 +1,5 @@
 import "./Sponsors.scss";
+import { Link } from "react-router-dom";
 import sponsor1 from "../../assets/images/sponsors/feast.jpg";
 import sponsor2 from "../../assets/images/sponsors/feast.jpg";
 import sponsor3 from "../../assets/images/sponsors/feast.jpg";
@@ -8,14 +9,7 @@ import sponsor6 from "../../assets/images/sponsors/feast.jpg";
 import Button from "../Button/Button";
 
 const Sponsors = () => {
-  const sponsors = [
-    { image: sponsor1, link: "https://thefeastbc.com/" },
-    { image: sponsor2, link: "https://thefeastbc.com/" },
-    { image: sponsor3, link: "https://thefeastbc.com/" },
-    { image: sponsor4, link: "https://thefeastbc.com/" },
-    { image: sponsor5, link: "https://thefeastbc.com/" },
-    { image: sponsor6, link: "https://thefeastbc.com/" },
-  ];
+  const sponsors = [{ image: sponsor1, link: "https://thefeastbc.com/" }];
 
   return (
     <div className="sponsors">
@@ -33,7 +27,9 @@ const Sponsors = () => {
           </div>
         ))}
       </div>
-      <Button text={"Be A Sponsor"} className={"button--primary"} />
+      <Link to="/sponsorpage">
+        <Button text={"Be A Sponsor"} className={"button--primary"} />
+      </Link>
     </div>
   );
 };
