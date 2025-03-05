@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import hamburger from "../../assets/hamburger.svg";
 import close from "../../assets/close.svg";
@@ -12,30 +13,18 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleHamburgerClick = () => {
-    setIsNavVisible(!isNavVisible);
-  };
-
-  const handleCloseNav = () => {
-    setIsNavVisible(false);
-  };
+  const handleHamburgerClick = () => setIsNavVisible(!isNavVisible);
+  const handleCloseNav = () => setIsNavVisible(false);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -60,19 +49,18 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
         <Button text={"GrandFeast Tickets"} className={"button--white"} />
         <div className="header__nav">
           <ul className="header__nav-list">
+            <Link to="/">
+              <li className="header__nav-li">Home</li>
+            </Link>
             <li
               className="header__nav-li"
-              onClick={() => {
-                scrollToSection(grandFeastRef);
-              }}
+              onClick={() => scrollToSection(grandFeastRef)}
             >
               Grand Feast
             </li>
             <li
               className="header__nav-li"
-              onClick={() => {
-                scrollToSection(prayerRef);
-              }}
+              onClick={() => scrollToSection(prayerRef)}
             >
               Prayer
             </li>
@@ -80,19 +68,21 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
               className="header__nav-li"
               onClick={() => {
                 scrollToSection(socialsRef);
-                onClose();
+                handleCloseNav();
               }}
             >
               Socials
             </li>
           </ul>
         </div>
-        <img
-          src={bcfeasthorizontalblack}
-          alt="bc feast"
-          className="header__logo"
-          onClick={scrollToTop}
-        />
+        <Link to="/">
+          <img
+            src={bcfeasthorizontalblack}
+            alt="bc feast"
+            className="header__logo"
+            onClick={scrollToTop}
+          />
+        </Link>
       </div>
     </header>
   );

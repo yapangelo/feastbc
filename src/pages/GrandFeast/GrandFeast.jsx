@@ -1,55 +1,13 @@
 import "./GrandFeast.scss";
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import Button from "../../components/Button/Button";
 import Speaker from "../../components/Speaker/Speaker";
 import Sponsors from "../../components/Sponsors/Sponsors";
+import Form from "../../components/Form/Form";
 import hero from "../../assets/images/grandfeast-hero.jpg";
 import bo from "../../assets/images/bo.png";
 import monching from "../../assets/images/monching.png";
 import arun from "../../assets/images/arun.png";
 
 const GrandFeast = () => {
-  const form = useRef();
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState("");
-  const [popupType, setPopupType] = useState("");
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_f63htos", // Service ID
-        "template_a8ihvuh", // Template ID
-        form.current,
-        "0mk-5r8TGGIOvV0Uy" // Public Key
-      )
-      .then(
-        (result) => {
-          setPopupMessage("Email sent successfully!"); // Success message
-          setPopupType("success"); // Set popup type to success
-          setShowPopup(true); // Show the popup
-
-          form.current.reset();
-        },
-        (error) => {
-          setPopupMessage("Failed to send the email. Please try again."); // Error message
-          setPopupType("error"); // Set popup type to error
-          setShowPopup(true); // Show the popup
-        }
-      );
-  };
-
-  React.useEffect(() => {
-    if (showPopup) {
-      const timer = setTimeout(() => {
-        setShowPopup(false);
-      }, 3000); // Hide after 3 seconds
-      return () => clearTimeout(timer); // Clear timer if the component unmounts
-    }
-  }, [showPopup]);
-
   return (
     <section className="grandfeast">
       <div className="grandfeast__hero">
@@ -83,13 +41,20 @@ const GrandFeast = () => {
       <div className="grandfeast__speakers">
         <h1 className="grandfeast__speakers-title">OUR SPEAKERS</h1>
         <div className="grandfeast__speakers-container">
-          <Speaker image={bo} name="Bo Sanchez" title="Founder, The Feast" />
+          <Speaker
+            className="grandfeast__speakers-speaker"
+            image={bo}
+            name="Bo Sanchez"
+            title="Founder, The Feast"
+          />
           <Speaker
             image={monching}
             name="Monching Bueno"
             title="Country Builder, Feast Canada"
+            className="grandfeast__speakers-speaker"
           />
           <Speaker
+            className="grandfeast__speakers-speaker"
             image={arun}
             name="Arun Gogna"
             title="Regional Builder, Feast Mega Manila"
@@ -99,53 +64,38 @@ const GrandFeast = () => {
       <div className="grandfeast__sponsors">
         <Sponsors />
       </div>
-      <div className="grandfeast__form">
-        <h1 className="grandfeast__form-title">RESERVE YOUR TICKETS!</h1>
-
-        <form ref={form} onSubmit={sendEmail} className="reservation__form">
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Name"
-            className="reservation__form-name"
-          />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Email"
-            className="reservation__form-email"
-          />
-          <input
-            type="tel"
-            name="user_phone"
-            placeholder="Phone"
-            className="reservation__form-phone"
-          />
-          <input
-            type="number"
-            name="user_numberoftickets"
-            placeholder="Number of Tickets"
-            className="reservation__form-tickets"
-            min="1"
-            required
-          />
-          <div>
-            <Button
-              type="submit"
-              text="Submit"
-              value="Send"
-              className="button--primary reservation__form-button"
-            />
-          </div>
-        </form>
-
-        {/* Popup Notification */}
-        {showPopup && (
-          <div className={`popup ${popupType}`}>
-            <p>{popupMessage}</p>
-          </div>
-        )}
-      </div>
+      <section>
+        <Form
+          title="RESERVE YOUR TICKETS!"
+          inputs={[
+            {
+              type: "text",
+              name: "user_name",
+              placeholder: "Name",
+              required: true,
+            },
+            {
+              type: "email",
+              name: "user_email",
+              placeholder: "Email",
+              required: true,
+            },
+            {
+              type: "tel",
+              name: "user_phone",
+              placeholder: "Phone",
+              required: true,
+            },
+            {
+              type: "number",
+              name: "user_numberoftickets",
+              placeholder: "Number of Tickets",
+              min: 1,
+              required: true,
+            },
+          ]}
+        />
+      </section>
     </section>
   );
 };
