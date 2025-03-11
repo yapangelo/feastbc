@@ -1,5 +1,6 @@
 import "./Prayer.scss";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 const Prayer = () => {
   return (
@@ -12,7 +13,9 @@ const Prayer = () => {
         face life’s challenges.
       </p>
       <div className="prayer__button-container">
+        {/* <Link to="/prayerpage"> */}
         <Button text="Ask for a prayer" className="button--primary" />
+        {/* </Link> */}
       </div>
     </div>
   );

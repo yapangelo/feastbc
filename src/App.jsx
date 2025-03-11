@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import SponsorPage from "./pages/SponsorPage/SponsorPage";
 import Header from "./components/Header/Header";
 import BackToTop from "./components/BackToTop/BackToTop";
+import PrayerPage from "./pages/PrayerPage/PrayerPage";
 
 function App() {
   // Create refs for each section
@@ -64,6 +65,7 @@ function App() {
           }
         />
         <Route path="/sponsorpage" element={<SponsorPage />} />
+        <Route path="/prayerpage" element={<PrayerPage />} />
       </Routes>
       <BackToTop />
       <footer className="app__footer">

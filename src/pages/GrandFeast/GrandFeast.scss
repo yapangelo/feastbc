@@ -39,6 +39,12 @@
         text-align: center;
         color: white;
         @include copy-specs;
+
+        @include tablet-768 {
+            width: 100%;
+            max-width: 100%;
+        }
+        
         @include desktop-1280 {
             width: 100%;
             max-width: 100%;

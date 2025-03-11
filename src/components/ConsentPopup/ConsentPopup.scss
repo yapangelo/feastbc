@@ -1,0 +1,64 @@
+@use "../../styles/partials/mixins" as *;
+
+.consentpopup {
+    color: white;
+    position: fixed;
+    top: 0; // Ensure it covers the full screen
+    left: 0;
+    width: 100vw;
+    height: 100vh; // Full height
+    background-color: rgba(0, 0, 0, 0.7); // Dark overlay
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1000; // Ensure it's on top
+    padding: 5rem;
+
+    @include tablet-768 {
+        padding: 10rem;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: space-between; // Fix applied
+        align-items: center; // Ensures proper vertical alignment
+        width: 100%; // Ensures the full width is used
+        max-width: 30rem;
+
+        @include desktop-1280 {
+            max-width: 50rem;
+        }
+    }
+
+    &__close {
+        width: .75rem;
+    }
+
+    &__policy {
+        font-size: .75rem;
+        line-height: .75rem;
+        padding: .5rem;
+        max-width: 30rem;
+
+        @include desktop-1280 {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            max-width: 50rem;
+        }
+    }
+
+    &__content {
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 90%;
+        max-width: 600px;
+        max-height: 80vh; // Prevents excessive height
+        overflow-y: auto; // Allows scrolling if content is too long
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+}
