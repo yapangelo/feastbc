@@ -46,7 +46,9 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
             className={isNavVisible ? "open" : ""}
           />
         )}
-        <Button text={"GrandFeast Tickets"} className={"button--white"} />
+        <Link to="/tickets">
+          <Button text={"Grand Feast Tickets"} className={"button--white"} />
+        </Link>
         <div className="header__nav">
           <ul className="header__nav-list">
             <Link to="/">
