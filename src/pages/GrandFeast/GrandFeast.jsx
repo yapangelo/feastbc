@@ -61,9 +61,7 @@ const GrandFeast = () => {
           />
         </div>
       </div>
-      <div className="grandfeast__sponsors">
-        <Sponsors />
-      </div>
+
       <section>
         <Form
           title="RESERVE YOUR TICKETS!"
@@ -96,6 +94,9 @@ const GrandFeast = () => {
           ]}
         />
       </section>
+      <div className="grandfeast__sponsors">
+        <Sponsors />
+      </div>
     </section>
   );
 };

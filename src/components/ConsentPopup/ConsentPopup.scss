@@ -2,22 +2,28 @@
 
 .consentpopup {
     color: white;
-    position: fixed;
-    top: 0; // Ensure it covers the full screen
-    left: 0;
+
     width: 100vw;
-    height: 100vh; // Full height
+
     background-color: rgba(0, 0, 0, 0.7); // Dark overlay
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+
     z-index: 1000; // Ensure it's on top
     padding: 5rem;
 
     @include tablet-768 {
         padding: 10rem;
+    }
+
+    @include desktop-1280 {
+    position: fixed;
+    top: 0; // Ensure it covers the full screen
+    left: 0;
+        height: 100vh; // Full height
+            overflow: hidden;
     }
 
     &__date {
