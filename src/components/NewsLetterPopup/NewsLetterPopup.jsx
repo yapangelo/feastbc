@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NewsletterPopup.scss";
+import "./NewsLetterPopup.scss";
 
 const NewsletterPopup = ({ onClose }) => {
   const [email, setEmail] = useState("");
