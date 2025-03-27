@@ -1,0 +1,47 @@
+@use "../../styles/partials/mixins" as *;
+
+.speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    flex: 1 1 200px; /* Ensures flexible sizing */
+    text-align: center;
+    position: relative;
+
+    @include desktop-1280 {
+        width: 30rem;
+        margin: auto;
+    }
+
+    &__image {
+        width: 20rem;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: .75rem;
+        line-height: .75rem;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 12rem;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+
+        @include desktop-1280 {
+            width: 60%;
+        }
+    }
+  }

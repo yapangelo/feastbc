@@ -1,0 +1,17 @@
+@use "../../styles/partials/mixins" as *;
+
+.prayer {
+    display: flex;
+    flex-direction: column;
+    @include copy-specs;
+
+    &__title {
+        @include section-title;
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center; /* Centers the button */
+        width: 100%;
+    }
+}

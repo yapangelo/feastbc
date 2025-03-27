@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+
+.prayerpage {
+    &__form {
+        padding-top: 7rem;
+        background-color: black;
+        height: 100vh;
+    }
+}
+
+// body.no-scroll {
+//     overflow: hidden;
+// }

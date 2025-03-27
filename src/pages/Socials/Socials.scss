@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins" as *;
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        @include section-title;
+    }
+
+    &__icontainer {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        width: 8rem;
+        padding-bottom: 2rem;
+
+        &-icon {
+            width: 1.5rem;
+        }
+    }
+}
