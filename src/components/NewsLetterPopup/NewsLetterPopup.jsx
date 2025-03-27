@@ -11,14 +11,13 @@ const NewsletterPopup = ({ onClose }) => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwwVkj5-q7PTrF5k106M-YeZ-JbaaKxVvGQpwXnrrqmap-5kG59Tcni6vXrynjr4ifp/exec",
+        "https://script.google.com/macros/s/AKfycbyknw3QsyrpNArUeRfvJaoMe-LnXbMGXpEDzcbs2A1dg88aRi2Rq6qss9xTkBgHkEhh/exec",
         {
           method: "POST",
-          mode: "cors", // Ensure CORS handling
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify({ email }),
+          body: `email=${encodeURIComponent(email)}`,
         }
       );
 
