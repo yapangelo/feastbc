@@ -7,6 +7,7 @@ import sponsor4 from "../../assets/images/sponsors/feast.jpg";
 import sponsor5 from "../../assets/images/sponsors/feast.jpg";
 import sponsor6 from "../../assets/images/sponsors/feast.jpg";
 import Button from "../Button/Button";
+import SponsorTierList from "../SponsorTierList/SponsorTierList";
 
 const Sponsors = () => {
   const sponsors = [{ image: sponsor1, link: "https://thefeastbc.com/" }];
@@ -30,6 +31,7 @@ const Sponsors = () => {
       <Link to="/sponsorpage">
         <Button text={"Be A Sponsor"} className={"button--primary"} />
       </Link>
+      <SponsorTierList />
     </div>
   );
 };

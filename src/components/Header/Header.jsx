@@ -7,7 +7,13 @@ import bcfeasthorizontalblack from "../../assets/images/bcfeast-horizontal-black
 import NavPopUp from "../NavPopup/NavPopup";
 import Button from "../Button/Button";
 
-const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
+const Header = ({
+  scrollToSection,
+  grandFeastRef,
+  prayerRef,
+  socialsRef,
+  sponsorRef,
+}) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,7 +47,7 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
             onClose={handleCloseNav}
             scrollToSection={scrollToSection}
             grandFeastRef={grandFeastRef}
-            prayerRef={prayerRef}
+            sponsorRef={sponsorRef}
             socialsRef={socialsRef}
             className={isNavVisible ? "open" : ""}
           />
@@ -62,9 +68,9 @@ const Header = ({ scrollToSection, grandFeastRef, prayerRef, socialsRef }) => {
             </li>
             <li
               className="header__nav-li"
-              onClick={() => scrollToSection(prayerRef)}
+              onClick={() => scrollToSection(sponsorRef)}
             >
-              Prayer
+              Sponsors
             </li>
             <li
               className="header__nav-li"
