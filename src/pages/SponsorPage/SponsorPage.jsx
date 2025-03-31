@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./SponsorPage.scss";
 import Form from "../../components/Form/Form";
+import SponsorTierList from "../../components/SponsorTierList/SponsorTierList";
 
 const SponsorPage = () => {
   useEffect(() => {
@@ -44,6 +45,9 @@ const SponsorPage = () => {
             },
           ]}
         />
+      </div>
+      <div className="sponsorpage__tierlist">
+        <SponsorTierList />
       </div>
     </div>
   );

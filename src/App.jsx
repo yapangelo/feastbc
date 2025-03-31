@@ -13,6 +13,7 @@ function App() {
   const grandFeastRef = useRef(null);
   const prayerRef = useRef(null);
   const socialsRef = useRef(null);
+  const sponsorRef = useRef(null);
 
   // Function to scroll to the referenced section smoothly and slowly
   const scrollToSection = (ref) => {
@@ -51,6 +52,7 @@ function App() {
         grandFeastRef={grandFeastRef}
         prayerRef={prayerRef}
         socialsRef={socialsRef}
+        sponsorRef={sponsorRef}
       />
       <Routes>
         {/* Pass refs & scroll function to Home so it can attach them to sections */}
@@ -62,6 +64,7 @@ function App() {
               grandFeastRef={grandFeastRef}
               prayerRef={prayerRef}
               socialsRef={socialsRef}
+              sponsorRef={sponsorRef}
             />
           }
         />

@@ -1,6 +1,5 @@
 import "./GrandFeast.scss";
 import Speaker from "../../components/Speaker/Speaker";
-import Sponsors from "../../components/Sponsors/Sponsors";
 import Form from "../../components/Form/Form";
 import hero from "../../assets/images/grandfeast-hero.jpg";
 import bo from "../../assets/images/bo.png";
@@ -94,9 +93,6 @@ const GrandFeast = () => {
           ]}
         />
       </section>
-      <div className="grandfeast__sponsors">
-        <Sponsors />
-      </div>
     </section>
   );
 };

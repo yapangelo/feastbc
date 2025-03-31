@@ -10,17 +10,17 @@
     justify-content: center;
     // overflow: auto;
     z-index: 1000; // Ensure it's on top
-    padding: 5rem;
+    padding: 2rem;
+    position: fixed;
+    top: 0; // Ensure it covers the full screen
+    left: 0;
+    height: 100vh; // Full height
 
     @include tablet-768 {
         padding: 10rem;
     }
 
     @include desktop-1280 {
-    position: fixed;
-    top: 0; // Ensure it covers the full screen
-    left: 0;
-    height: 100vh; // Full height
     overflow: hidden;
     }
 
