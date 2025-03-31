@@ -58,7 +58,7 @@ const SponsorTierList = () => {
         <div className="sponsortierlist__tier">
           <h2 className="sponsortierlist__tier-title">Silver</h2>
           <ul className="sponsortierlist__tier-details">
-            <li className="sponsortierlist__listitem">$1000</li>
+            <li className="sponsortierlist__listitem">$600</li>
             <li className="sponsortierlist__listitem">
               3.7" x 2.5" AD PAGE DIMENSIONS
             </li>
