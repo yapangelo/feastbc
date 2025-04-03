@@ -33,7 +33,7 @@ const Form = ({
       )
       .then(
         (result) => {
-          setPopupMessage("Email sent successfully!"); // Success message
+          setPopupMessage("Sumakses!"); // Success message
           setPopupType("success"); // Set popup type to success
           setShowPopup(true); // Show the popup
 
@@ -51,7 +51,7 @@ const Form = ({
     if (showPopup) {
       const timer = setTimeout(() => {
         setShowPopup(false);
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [showPopup]);
