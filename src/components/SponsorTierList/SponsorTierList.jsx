@@ -13,7 +13,7 @@ const SponsorTierList = () => {
               7.6" x 5.2" AD PAGE DIMENSIONS
             </li>
             <li className="sponsortierlist__listitem">INVOICE ISUANCE</li>
-            <li className="sponsortierlist__listitem">2 TICKETS</li>
+            <li className="sponsortierlist__listitem">3 TICKETS</li>
             <li className="sponsortierlist__listitem">2 RESERVED SEATS</li>
             <li className="sponsortierlist__listitem">VERBAL ANNOUNCEMENT</li>
             <li className="sponsortierlist__listitem">
