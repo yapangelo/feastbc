@@ -33,14 +33,14 @@ const Form = ({
       )
       .then(
         (result) => {
-          setPopupMessage("Sumakses!"); // Success message
+          setPopupMessage("Form Submitted. Thank You!"); // Success message
           setPopupType("success"); // Set popup type to success
           setShowPopup(true); // Show the popup
 
           form.current.reset();
         },
         (error) => {
-          setPopupMessage("Failed to send the email. Please try again."); // Error message
+          setPopupMessage("Failed to send. Please try again."); // Error message
           setPopupType("error"); // Set popup type to error
           setShowPopup(true); // Show the popup
         }
