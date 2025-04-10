@@ -4,7 +4,7 @@ import Form from "../../components/Form/Form";
 import hero from "../../assets/images/grandfeast-hero.jpg";
 import bo from "../../assets/images/bo.png";
 import monching from "../../assets/images/monching.png";
-import arun from "../../assets/images/arun.png";
+import arun from "../../assets/images/arun1.png";
 
 const GrandFeast = () => {
   return (

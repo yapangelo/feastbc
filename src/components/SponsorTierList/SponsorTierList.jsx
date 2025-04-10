@@ -10,26 +10,43 @@ const SponsorTierList = () => {
           <ul className="sponsortierlist__tier-details">
             <li className="sponsortierlist__listitem">$1000</li>
             <li className="sponsortierlist__listitem">
-              7.6" x 5.2" AD PAGE DIMENSIONS
+              194mm x 132.5mm AD PAGE DIMENSIONS{" "}
+              <p className="sponsortierlist__listitem-fineprint">
+                {" "}
+                (7.6" x 5.2")
+              </p>
             </li>
-            <li className="sponsortierlist__listitem">INVOICE ISUANCE</li>
-            <li className="sponsortierlist__listitem">3 TICKETS</li>
-            <li className="sponsortierlist__listitem">2 RESERVED SEATS</li>
-            <li className="sponsortierlist__listitem">VERBAL ANNOUNCEMENT</li>
+            <li className="sponsortierlist__listitem">INVOICE ISSUANCE</li>
             <li className="sponsortierlist__listitem">
-              LOGO DISPLAYED ON SCREEN
-            </li>
-            <li className="sponsortierlist__listitem">
-              10 SEC. AUDIO/VIDEO PRESENTATION
+              4 TICKETS & RESERVED SEATS
             </li>
             <li className="sponsortierlist__listitem">
-              TABLES/STANDEE/TARPAULIN
+              VERBAL ACKNOWLEDGEMENT
             </li>
             <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA CHANNELS (Facebook and Instagram)
+              LINE TEXT ACKNOWLEDGEMENT
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE (with direct link to your company website)
+              LOGO DISPLAYED ON BIG SCREEN
+            </li>
+            <li className="sponsortierlist__listitem">FLYERS</li>
+            <li className="sponsortierlist__listitem">STANDEE/TARPAULIN</li>
+            <li className="sponsortierlist__listitem">
+              TABLE{" "}
+              <p className="sponsortierlist__listitem-fineprint">
+                (For marketing & advertisements. Contact us for more details)
+              </p>
+            </li>
+            <li className="sponsortierlist__listitem">VIDEO ADVERTISEMENT</li>
+
+            <li className="sponsortierlist__listitem">
+              SOCIAL MEDIA PROMOTION
+            </li>
+            <li className="sponsortierlist__listitem">
+              GRAND FEAST WEBSITE PROMOTION{" "}
+              <p className="sponsortierlist__listitem-fineprint">
+                (with direct link to your company website)
+              </p>
             </li>
           </ul>
         </div>
@@ -38,42 +55,70 @@ const SponsorTierList = () => {
           <ul className="sponsortierlist__tier-details">
             <li className="sponsortierlist__listitem">$800</li>
             <li className="sponsortierlist__listitem">
-              3.7" x 5.2" AD PAGE DIMENSIONS
+              94.75mm x 132.5mm AD PAGE DIMENSIONS
+              <p className="sponsortierlist__listitem-fineprint">
+                (3.7" x 5.2")
+              </p>
             </li>
-            <li className="sponsortierlist__listitem">INVOICE ISUANCE</li>
-            <li className="sponsortierlist__listitem">2 TICKETS</li>
-            <li className="sponsortierlist__listitem">2 RESERVED SEATS</li>
-            <li className="sponsortierlist__listitem">VERBAL ANNOUNCEMENT</li>
+            <li className="sponsortierlist__listitem">INVOICE ISSUANCE</li>
             <li className="sponsortierlist__listitem">
-              LOGO DISPLAYED ON SCREEN
-            </li>
-            <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA CHANNELS (Facebook and Instagram)
+              3 RESERVED TICKETS & SEATS
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE (with direct link to your company website)
+              VERBAL ACKNOWLEDGEMENT
+            </li>
+            <li className="sponsortierlist__listitem">
+              LINE TEXT ACKNOWLEDGEMENT
+            </li>
+            <li className="sponsortierlist__listitem">
+              LOGO DISPLAYED ON BIG SCREEN
+            </li>
+            <li className="sponsortierlist__listitem">FLYERS</li>
+            <li className="sponsortierlist__listitem">STANDEE/TARPAULIN</li>
+            <li className="sponsortierlist__listitem">
+              SOCIAL MEDIA PROMOTION
+            </li>
+            <li className="sponsortierlist__listitem">
+              GRAND FEAST WEBSITE PROMOTION{" "}
+              <p className="sponsortierlist__listitem-fineprint">
+                (with direct link to your company website)
+              </p>
             </li>
           </ul>
         </div>
+
         <div className="sponsortierlist__tier">
           <h2 className="sponsortierlist__tier-title">Silver</h2>
           <ul className="sponsortierlist__tier-details">
             <li className="sponsortierlist__listitem">$600</li>
             <li className="sponsortierlist__listitem">
-              3.7" x 2.5" AD PAGE DIMENSIONS
+              94.75mm x 64mm AD PAGE DIMENSIONS
+              <p className="sponsortierlist__listitem-fineprint">
+                (3.7" x 2.5")
+              </p>{" "}
             </li>
-            <li className="sponsortierlist__listitem">INVOICE ISUANCE</li>
-            <li className="sponsortierlist__listitem">2 TICKETS</li>
-            <li className="sponsortierlist__listitem">2 RESERVED SEATS</li>
-            <li className="sponsortierlist__listitem">VERBAL ANNOUNCEMENT</li>
+            <li className="sponsortierlist__listitem">INVOICE ISSUANCE</li>
             <li className="sponsortierlist__listitem">
-              LOGO DISPLAYED ON SCREEN
-            </li>
-            <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA CHANNELS (Facebook and Instagram)
+              2 RESERVED TICKETS & SEATS
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE (with direct link to your company website)
+              VERBAL ACKNOWLEDGEMENT
+            </li>
+            <li className="sponsortierlist__listitem">
+              LINE TEXT ACKNOWLEDGEMENT
+            </li>
+            <li className="sponsortierlist__listitem">
+              LOGO DISPLAYED ON BIG SCREEN
+            </li>
+            <li className="sponsortierlist__listitem">FLYERS</li>
+            <li className="sponsortierlist__listitem">
+              SOCIAL MEDIA PROMOTION
+            </li>
+            <li className="sponsortierlist__listitem">
+              GRAND FEAST WEBSITE PROMOTION{" "}
+              <p className="sponsortierlist__listitem-fineprint">
+                (with direct link to your company website)
+              </p>
             </li>
           </ul>
         </div>
