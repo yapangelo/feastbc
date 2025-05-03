@@ -19,12 +19,12 @@ const GrandFeast = () => {
       <div className="grandfeast__copy">
         <h1 className="grandfeast__copy-title">Grand Feast BC 2025</h1>
         <p className="grandfeast__copy-text grandfeast__copy-text--padding-bottom">
-          The Grand Feast BC is an annual gathering that unites people from all
-          walks of life for a day of worship, inspiration, and spiritual
-          renewal. Rooted in the mission of the Light of Jesus Community, it
-          serves as a beacon of faith, unity, and hope, welcoming both Catholics
-          and non-Catholics to experience God’s love through uplifting music,
-          heartfelt prayers, and life-changing talks.
+          The Grand Feast BC is a gathering that unites people from all walks of
+          life for a day of worship, inspiration, and spiritual renewal. Rooted
+          in the mission of the Light of Jesus Community, it serves as a beacon
+          of faith, unity, and hope, welcoming both Catholics and non-Catholics
+          to experience God’s love through uplifting music, heartfelt prayers,
+          and life-changing talks.
         </p>
         <p className="grandfeast__copy-text">
           This year’s event will take place on Saturday, August 30, 2025, at the
