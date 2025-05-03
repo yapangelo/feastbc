@@ -40,10 +40,10 @@ const SponsorTierList = () => {
             <li className="sponsortierlist__listitem">VIDEO ADVERTISEMENT</li>
 
             <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA PROMOTION
+              SOCIAL MEDIA ACKNOWLEDGMENT
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE PROMOTION{" "}
+              GRAND FEAST BC WEBSITE PROMOTION{" "}
               <p className="sponsortierlist__listitem-fineprint">
                 (with direct link to your company website)
               </p>
@@ -76,10 +76,10 @@ const SponsorTierList = () => {
             <li className="sponsortierlist__listitem">FLYERS</li>
             <li className="sponsortierlist__listitem">STANDEE/TARPAULIN</li>
             <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA PROMOTION
+              SOCIAL MEDIA ACKNOWLEDGMENT
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE PROMOTION{" "}
+              GRAND FEAST BC WEBSITE PROMOTION{" "}
               <p className="sponsortierlist__listitem-fineprint">
                 (with direct link to your company website)
               </p>
@@ -112,10 +112,10 @@ const SponsorTierList = () => {
             </li>
             <li className="sponsortierlist__listitem">FLYERS</li>
             <li className="sponsortierlist__listitem">
-              SOCIAL MEDIA PROMOTION
+              SOCIAL MEDIA ACKNOWLEDGMENT
             </li>
             <li className="sponsortierlist__listitem">
-              GRAND FEAST WEBSITE PROMOTION{" "}
+              GRAND FEAST BC WEBSITE PROMOTION{" "}
               <p className="sponsortierlist__listitem-fineprint">
                 (with direct link to your company website)
               </p>
