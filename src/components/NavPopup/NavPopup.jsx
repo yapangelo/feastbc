@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const NavPopup = ({
   scrollToSection,
   grandFeastRef,
-  prayerRef,
   socialsRef,
   onClose,
   className,
@@ -25,24 +24,7 @@ const NavPopup = ({
         >
           GRAND FEAST
         </h2>
-        <h2
-          className="navpopup__page"
-          onClick={() => {
-            scrollToSection(prayerRef);
-            onClose();
-          }}
-        >
-          PRAYER
-        </h2>
-        <h2
-          className="navpopup__page"
-          onClick={() => {
-            scrollToSection(socialsRef);
-            onClose();
-          }}
-        >
-          SOCIALS
-        </h2>
+        <h2 className="navpopup__page">SPONSORS</h2>
       </div>
     </nav>
   );

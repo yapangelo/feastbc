@@ -42,7 +42,6 @@ const Header = ({ scrollToSection, grandFeastRef, sponsorRef }) => {
             scrollToSection={scrollToSection}
             grandFeastRef={grandFeastRef}
             sponsorRef={sponsorRef}
-            socialsRef={socialsRef}
             className={isNavVisible ? "open" : ""}
           />
         )}
