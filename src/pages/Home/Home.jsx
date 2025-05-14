@@ -5,7 +5,7 @@ import Socials from "../Socials/Socials";
 import Sponsors from "../../components/Sponsors/Sponsors.jsx";
 import NewsletterPopup from "../../components/NewsLetterPopup/NewsLetterPopup";
 
-function Home({ grandFeastRef, prayerRef, socialsRef, formRef, sponsorRef }) {
+function Home({ grandFeastRef, socialsRef, formRef, sponsorRef }) {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -28,9 +28,9 @@ function Home({ grandFeastRef, prayerRef, socialsRef, formRef, sponsorRef }) {
       <div ref={sponsorRef}>
         <Sponsors />
       </div>
-      <div ref={prayerRef}>
+      {/* <div ref={prayerRef}>
         <Prayer />
-      </div>
+      </div> */}
       <div ref={socialsRef}>
         <Socials />
       </div>
