@@ -1,0 +1,34 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.countdown {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 3rem;
+
+  &__timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 2rem;
+
+    @include tablet-768 {
+      flex-direction: row;
+    }
+
+    div {
+      background-color: $feastred;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 150px;
+      margin: auto;
+
+      @include tablet-768 {
+        width: 120px;
+        margin: 0;
+      }
+    }
+  }
+}
