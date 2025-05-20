@@ -1,6 +1,7 @@
 import "./GrandFeast.scss";
 import Speaker from "../../components/Speaker/Speaker";
 import Form from "../../components/Form/Form";
+import CountDown from "../../components/CountDown/CountDown";
 import hero from "../../assets/images/grandfeast-hero.jpg";
 import bo from "../../assets/images/bo.png";
 import monching from "../../assets/images/monching.png";
@@ -15,6 +16,9 @@ const GrandFeast = () => {
           alt="grand feast details"
           className="grandfeast__hero-image"
         />
+      </div>
+      <div className="grandfeast__countdown">
+        <CountDown />
       </div>
       <div className="grandfeast__copy">
         <h1 className="grandfeast__copy-title">Grand Feast BC 2025</h1>

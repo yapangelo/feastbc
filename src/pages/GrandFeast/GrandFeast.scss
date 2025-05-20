@@ -32,6 +32,26 @@
         }
     }
 
+    // &__countdown {
+    //     text-align: center;
+    //     font-family: sans-serif;
+
+    //     &-timer {
+    //         display: flex;
+    //         justify-content: center;
+    //         gap: 1rem;
+    //         font-size: 2rem;
+
+    //         div {
+    //             background-color: $feastred;
+    //             color: white;
+    //             padding: 1rem;
+    //             border-radius: 0.5rem;
+    //             min-width: 70px;
+    //         }
+    //     }
+    // }
+
     &__speakers {
         background-image: url("../../assets/images/speakersbg.jpg");
         background-size: cover;
