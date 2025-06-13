@@ -15,16 +15,20 @@ const NavPopup = ({
         <Link to="/">
           <h2 className="navpopup__page">HOME</h2>
         </Link>
-        <h2
-          className="navpopup__page"
-          onClick={() => {
-            scrollToSection(grandFeastRef);
-            onClose();
-          }}
-        >
-          GRAND FEAST
-        </h2>
-        <h2 className="navpopup__page">SPONSORS</h2>
+        <Link to="/">
+          <h2
+            className="navpopup__page"
+            onClick={() => {
+              scrollToSection(grandFeastRef);
+              onClose();
+            }}
+          >
+            GRAND FEAST
+          </h2>
+        </Link>
+        <Link to="/sponsorpage">
+          <h2 className="navpopup__page">SPONSORSHIP</h2>
+        </Link>
       </div>
     </nav>
   );
