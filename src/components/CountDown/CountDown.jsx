@@ -28,6 +28,7 @@ const CountDown = () => {
   }, []);
   return (
     <div className="countdown">
+      <h1 className="countdown__title">Event Starts In</h1>
       <div className="countdown__timer">
         <div>{timeLeft.days}d</div>
         <div>{timeLeft.hours}h</div>
