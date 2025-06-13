@@ -6,11 +6,14 @@
   font-family: sans-serif;
   margin-top: 3rem;
 
+  &__title {
+    padding-bottom: 2rem;
+  }
+
   &__timer {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
-    gap: 1rem;
     font-size: 2rem;
 
     @include tablet-768 {
@@ -18,12 +21,11 @@
     }
 
     div {
-      background-color: $feastred;
-      color: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      width: 150px;
-      margin: auto;
+      // background-color: $feastred;
+      color: $feastred;
+      // padding: 1rem;
+      width: 80px;
+      // margin: auto;
 
       @include tablet-768 {
         width: 120px;

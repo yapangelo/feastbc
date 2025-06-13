@@ -1,5 +1,5 @@
 .sponsortierlist {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
     text-align: center;
   
     &__title {
@@ -10,17 +10,20 @@
     }
   
     &__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: center;
+      width: 100%;
+      margin: auto;
     }
   
     &__tier {
       background: white;
       border-radius: 1rem;
       padding: 2rem;
-      width: 300px;
+      margin: 1rem;
+      flex: 1 1 calc(33.333% - 2rem); // Adjusts to three columns with spacing
+      // width: 300px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
@@ -33,28 +36,20 @@
       color: #fff;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-  
-      &::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 60%;
-        margin: 0.5rem auto 0;
-        background: #fff;
-      }
+
     }
   
     // Custom tier colors
     &__tier:nth-child(1) &__tier-title {
-      background: linear-gradient(to right, #a57cff, #d98fff);
+      background: linear-gradient(to right, #d3d3d3, #e6e6e6, #f5f5f5);
     }
   
     &__tier:nth-child(2) &__tier-title {
-      background: linear-gradient(to right, #ffd700, #ffcc00);
+      background: linear-gradient(to right, #c19a6b, #f6e27a, #fff5cc);
     }
   
     &__tier:nth-child(3) &__tier-title {
-      background: linear-gradient(to right, #c0c0c0, #b0b0b0);
+      background: linear-gradient(to right, #a9a9a9, #d3d3d3, #d6d6d6);
     }
   
     &__tier-details {
