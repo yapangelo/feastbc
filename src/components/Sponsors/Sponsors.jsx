@@ -1,8 +1,8 @@
 import "./Sponsors.scss";
 import { Link } from "react-router-dom";
-import gold1 from "../../assets/images/sponsors/burnabysouthdental.jpg";
+import gold1 from "../../assets/images/sponsors/burnabysouthdenta2l.jpg";
 import silver1 from "../../assets/images/sponsors/drfranciscavaldez.jpg";
-import sponsor3 from "../../assets/images/sponsors/feast.jpg";
+import gold2 from "../../assets/images/sponsors/md-consulting.jpg";
 import sponsor4 from "../../assets/images/sponsors/feast.jpg";
 import sponsor5 from "../../assets/images/sponsors/feast.jpg";
 import sponsor6 from "../../assets/images/sponsors/feast.jpg";
@@ -10,12 +10,16 @@ import Button from "../Button/Button";
 // import SponsorTierList from "../SponsorTierList/SponsorTierList";
 
 const Sponsors = () => {
-  const sponsorsgold = [{ image: gold1, link: "https://thefeastbc.com/" }];
+  const sponsorsgold = [
+    { image: gold1, link: "https://www.burnabysouthdental.com/" },
+    {
+      image: gold2,
+    },
+  ];
 
   const sponsorssilver = [
     {
       image: silver1,
-      link: "https://www.burnabysouthdental.com/",
     },
   ];
 
@@ -23,14 +27,14 @@ const Sponsors = () => {
     <div className="sponsors">
       <h1 className="sponsors__title">EVENT SPONSORS</h1>
       <h2 className="sponsors__tier">Gold</h2>
-      <div className="sponsors__gallery">
+      <div className="sponsors__gallery-gold">
         {sponsorsgold.map((sponsor, index) => (
-          <div key={index} className="sponsors__gallery-imgcontainer">
+          <div key={index} className="sponsors__gallery-imgcontainer-gold">
             <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
               <img
                 src={sponsor.image}
                 alt={`Sponsor ${index + 1}`}
-                className="sponsors__gallery-image"
+                className="sponsors__gallery-image-gold"
               />
             </a>
           </div>

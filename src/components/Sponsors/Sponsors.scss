@@ -24,8 +24,18 @@
         width: 100%;
         margin-bottom: 2rem;
 
+        &-gold {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
         &-imgcontainer {
-            min-width: 10rem;
+            min-width: 1rem;
             padding: .625rem;
             background: white;
             border-radius: 10px;
@@ -34,14 +44,28 @@
             &:hover {
                 @include default-transition-hover;
             }
-        }
-    }
 
-    &__gallery-image {
+            &-gold {
+            margin-bottom: 2rem;
+            min-width: 1rem;
+            padding: .625rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                @include default-transition-hover;
+            }
+
+            }
+        }
+
+        &-image {
         width: 100%;
         height: auto;
-        max-width: 150px;
+        max-width: 300px;
         object-fit: contain;
+        }
     }
 
     .button--primary {
