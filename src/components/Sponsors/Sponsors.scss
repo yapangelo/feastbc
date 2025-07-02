@@ -13,6 +13,10 @@
 
     &__title {
         @include section-title;
+
+        &-icon {
+          margin: 2rem 0;
+        }
     }
 
     &__gallery {
@@ -75,10 +79,10 @@
 
 .sponsors__slideshow {
   width: 100%;
-  height: 500px;
+  height:600px;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, #e5e4e2, #f9f9f9, #c0c0c0);
+  // background: linear-gradient(135deg, #e5e4e2, #f9f9f9, #c0c0c0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,8 +106,6 @@
 }
 
 .sponsors__slide-image {
-  max-height: 80%; // keep some padding vertically
-  max-width: 90%;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
