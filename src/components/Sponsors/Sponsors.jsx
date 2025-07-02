@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import gold1 from "../../assets/images/sponsors/burnabysouthdenta2l.jpg";
 import silver1 from "../../assets/images/sponsors/drfranciscavaldez.jpg";
 import gold2 from "../../assets/images/sponsors/md-consulting.jpg";
+import gold3 from "../../assets/images/sponsors/wfg.jpg";
 import Button from "../Button/Button";
 // import SponsorTierList from "../SponsorTierList/SponsorTierList";
 
@@ -12,6 +13,9 @@ const Sponsors = () => {
     { image: gold1, link: "https://www.burnabysouthdental.com/" },
     {
       image: gold2,
+    },
+    {
+      image: gold3,
     },
   ];
 
