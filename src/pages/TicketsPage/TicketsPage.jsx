@@ -1,10 +1,16 @@
 import "./TicketsPage.scss";
+import ticketannouncement from "../../assets/images/ticket-announcement.png";
 import Form from "../../components/Form/Form";
 
 const TicketsPage = () => {
   return (
     <section className="ticketspage">
-      <Form
+      <img
+        src={ticketannouncement}
+        alt="tickets"
+        className="ticketspage__anouncement"
+      />
+      {/* <Form
         title="RESERVE YOUR TICKETS!"
         inputs={[
           {
@@ -33,7 +39,7 @@ const TicketsPage = () => {
             required: true,
           },
         ]}
-      />
+      /> */}
     </section>
   );
 };
