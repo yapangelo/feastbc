@@ -65,7 +65,7 @@ const GrandFeast = () => {
         </div>
       </div>
 
-      <section>
+      {/* <section>
         <Form
           title="RESERVE YOUR TICKETS!"
           inputs={[
@@ -96,7 +96,7 @@ const GrandFeast = () => {
             },
           ]}
         />
-      </section>
+      </section> */}
     </section>
   );
 };

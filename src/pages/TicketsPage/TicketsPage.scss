@@ -3,4 +3,12 @@
     height: 100vh;
     padding-top: 5rem;
     overflow: hidden;
+
+    &__anouncement {
+        width: 40rem;
+        // height: auto;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: block;
+    }
 }
