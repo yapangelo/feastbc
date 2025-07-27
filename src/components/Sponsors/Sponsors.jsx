@@ -10,6 +10,11 @@ import silver1 from "../../assets/images/sponsors/drfranciscavaldez.jpg";
 import silver2 from "../../assets/images/sponsors/silver-chris-estrella.jpg";
 import silver3 from "../../assets/images/sponsors/silver-jp-villanueva.png";
 import silver4 from "../../assets/images/sponsors/silver-vhec.png";
+import silver5 from "../../assets/images/sponsors/silver-usmile.jpg";
+import silver6 from "../../assets/images/sponsors/silver-marites.jpg";
+import silver7 from "../../assets/images/sponsors/silver-erc.jpg";
+import silver8 from "../../assets/images/sponsors/silver-citident.jpg";
+import silver9 from "../../assets/images/sponsors/silver-actfast.jpg";
 import Button from "../Button/Button";
 // import SponsorTierList from "../SponsorTierList/SponsorTierList";
 
@@ -39,6 +44,11 @@ const Sponsors = () => {
     {
       image: silver4,
     },
+    { image: silver5 },
+    { image: silver6, link: "https://www.drsisondental.ca/" },
+    { image: silver7 },
+    { image: silver8 },
+    { image: silver9, link: "https://www.actfast.ca/" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
