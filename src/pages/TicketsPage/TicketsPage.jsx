@@ -5,12 +5,12 @@ import Form from "../../components/Form/Form";
 const TicketsPage = () => {
   return (
     <section className="ticketspage">
-      <img
+      {/* <img
         src={ticketannouncement}
         alt="tickets"
         className="ticketspage__anouncement"
-      />
-      {/* <Form
+      /> */}
+      <Form
         title="RESERVE YOUR TICKETS!"
         inputs={[
           {
@@ -39,7 +39,7 @@ const TicketsPage = () => {
             required: true,
           },
         ]}
-      /> */}
+      />
     </section>
   );
 };
