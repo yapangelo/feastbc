@@ -10,7 +10,7 @@ const TicketsPage = () => {
         alt="tickets"
         className="ticketspage__anouncement"
       /> */}
-      <Form
+      {/* <Form
         title="RESERVE YOUR TICKETS!"
         inputs={[
           {
@@ -39,7 +39,8 @@ const TicketsPage = () => {
             required: true,
           },
         ]}
-      />
+      /> */}
+      <h1 className="ticketspage__soldout">Sold Out</h1>
     </section>
   );
 };
