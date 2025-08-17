@@ -13,4 +13,11 @@
         margin: 0 auto;
         display: block;
     }
+
+    &__soldout {
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
 }
